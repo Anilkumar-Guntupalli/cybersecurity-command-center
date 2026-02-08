@@ -72,104 +72,133 @@ Most security dashboards focus on displaying data.
 
 ---
 
-The Cybersecurity Command Center is built as a modular Security Operations platform designed to mirror real-world SOC environments. The architecture focuses on correlating security events, compressing threat intelligence, and delivering decision-ready alerts to analysts instead of raw data.
+## 🏗️ System Architecture
 
-────────────────────────────
-ARCHITECTURE OVERVIEW
-────────────────────────────
+The Cybersecurity Command Center is built as a modular Security Operations platform that mirrors real-world SOC workflows.  
+The architecture focuses on **correlation, prioritization, and analyst decision support**, not raw alert display.
 
-The system follows a layered pipeline architecture where each layer adds context, intelligence, and clarity to security events.
+---
+
+### 🔹 High-Level Architecture Flow
+
+## 🏗️ System Architecture
+
+The Cybersecurity Command Center is built as a modular Security Operations platform that mirrors real-world SOC workflows.  
+The architecture focuses on **correlation, prioritization, and analyst decision support**, not raw alert display.
+
+---
+
+### 🔹 High-Level Architecture Flow
 
 Data Sources
-Security data originates from multiple sources, including:
-
-Authentication and access logs
-
-Network activity and traffic events
-
-External threat intelligence feeds
-
-These sources represent the typical inputs used by enterprise SOC teams.
-
+↓
 Ingestion Layer
-The ingestion layer is responsible for:
-
-Collecting logs and threat feeds
-
-Normalizing event formats
-
-Ensuring consistent and structured data
-
-This layer acts as the foundation for accurate analysis.
-
+↓
 Correlation Engine
-The correlation engine connects related events and intelligence by:
-
-Identifying repeated or abnormal behavior
-
-Linking events with known malicious indicators
-
-Enriching alerts with reputation and confidence data
-
-This step reduces isolated alerts and highlights meaningful attack patterns.
-
+↓
 Risk Analysis Layer
+↓
+Decision Support
+↓
+Security Operations Dashboard
+
+
+---
+
+### 🔹 1. Data Sources
+
+The platform ingests security data from multiple sources commonly used in enterprise environments:
+
+- Authentication and access logs  
+- Network activity events  
+- External threat intelligence feeds  
+
+These inputs represent typical SOC telemetry.
+
+---
+
+### 🔹 2. Ingestion Layer
+
+Responsibilities:
+
+- Collect raw security events  
+- Normalize different data formats  
+- Prepare structured events for analysis  
+
+This layer ensures consistency across all incoming data.
+
+---
+
+### 🔹 3. Correlation Engine
+
+The correlation engine connects related events by:
+
+- Identifying repeated or abnormal behavior  
+- Linking events to known malicious indicators  
+- Enriching alerts with reputation and confidence data  
+
+This converts isolated alerts into meaningful security signals.
+
+---
+
+### 🔹 4. Risk Analysis Layer
+
 Each correlated alert is evaluated using:
 
-Behavioral frequency
+- Event frequency and behavior patterns  
+- Threat reputation intelligence  
+- Confidence scores from sources  
+- Contextual risk indicators  
 
-Threat reputation
+Output:
+- **Risk score**
+- **Severity classification (Low → Critical)**
 
-Confidence scores
+This mirrors how SOC analysts prioritize threats.
 
-Contextual indicators
+---
 
-The output of this layer is a calculated risk score and severity level that reflects real SOC prioritization logic.
+### 🔹 5. Decision Support Layer
 
-Decision Support Layer
-Instead of showing raw alerts, the system:
+Instead of showing raw logs, the system provides:
 
-Generates analyst-friendly explanations
+- Clear explanations of why an alert matters  
+- Context for faster investigation  
+- Action-oriented guidance for analysts  
 
-Highlights why an alert matters
+This significantly reduces alert fatigue.
 
-Suggests appropriate response actions
+---
 
-This significantly reduces alert fatigue and investigation time.
+### 🔹 6. Security Operations Dashboard
 
-Security Operations Dashboard
-The final layer presents information to analysts through:
+The dashboard presents:
 
-Prioritized alerts
+- Prioritized alerts  
+- Risk and severity visualization  
+- Consolidated investigation context  
 
-Severity and risk visualization
+Designed for **fast decision-making under pressure**.
 
-Investigation context in a single view
+---
 
-The dashboard is designed to support fast, confident decision-making under pressure.
+### 🔹 Architectural Principles
 
-────────────────────────────
-KEY ARCHITECTURAL PRINCIPLES
-────────────────────────────
+- Analyst-first design  
+- Signal over noise  
+- Risk-based prioritization  
+- Modular and extensible architecture  
+- Operational even with limited AI availability  
 
-Analyst-centric design
+---
 
-Signal over noise philosophy
+### 🔹 Architecture Value
 
-Risk-based prioritization
+Traditional dashboards focus on displaying data.  
+**This platform focuses on helping analysts decide and act faster.**
 
-Modular and extensible components
+By compressing multiple security signals into actionable intelligence, the Cybersecurity Command Center improves threat detection, prioritization, and response efficiency.
 
-Operates even with limited AI availability
-
-────────────────────────────
-ARCHITECTURE VALUE
-────────────────────────────
-
-Traditional security dashboards focus on displaying data.
-This architecture focuses on helping analysts decide.
-
-By compressing multiple security signals into actionable intelligence, the Cybersecurity Command Center enables faster detection, better prioritization, and more effective incident response.
 
 ## 🛠️ Tech Stack
 
