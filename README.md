@@ -72,8 +72,6 @@ Most security dashboards focus on displaying data.
 
 ---
 
-SYSTEM ARCHITECTURE
-
 The Cybersecurity Command Center is built as a modular Security Operations platform designed to mirror real-world SOC environments. The architecture focuses on correlating security events, compressing threat intelligence, and delivering decision-ready alerts to analysts instead of raw data.
 
 ────────────────────────────
