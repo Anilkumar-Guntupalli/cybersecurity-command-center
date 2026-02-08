@@ -72,21 +72,64 @@ Most security dashboards focus on displaying data.
 
 ---
 
-## 🧩 System Architecture
+SYSTEM ARCHITECTURE
+
+The Cybersecurity Command Center is designed using a modular, real-world Security Operations Center (SOC) architecture. The system collects security events, enriches them with threat intelligence, evaluates contextual risk, and presents prioritized alerts to analysts for faster and more accurate decision-making.
+
+ARCHITECTURE FLOW
 
 Data Sources
-├── Authentication Logs
-├── Network Activity
-├── Threat Intelligence Feeds
+• Authentication logs
+• Network activity
+• Threat intelligence feeds
+
 ↓
+
+Event Ingestion Layer
+• Collects logs and threat feeds
+• Normalizes event formats
+• Validates incoming data
+
+↓
+
 Correlation Engine
-↓
-Risk Scoring & Severity Classification
-↓
-Security Operations Dashboard
+• Links related events
+• Identifies suspicious patterns
+• Enriches events with reputation data
 
+↓
 
----
+Risk Analysis Layer
+• Calculates risk scores
+• Assigns severity levels
+• Weighs confidence and behavior indicators
+
+↓
+
+Decision Support Layer
+• Generates analyst-friendly explanations
+• Reduces alert noise
+• Suggests investigation or response actions
+
+↓
+
+SOC Dashboard
+• Displays prioritized alerts
+• Provides investigation context
+• Supports analyst workflows
+
+ARCHITECTURAL PRINCIPLES
+
+• Modular and extensible design
+• Analyst-centric decision support
+• Signal-over-noise philosophy
+• Resilient operation without full AI dependency
+• Built to reflect real SOC workflows
+
+WHY THIS ARCHITECTURE MATTERS
+
+Modern security teams face alert overload, fragmented intelligence, and limited response time.
+This architecture compresses multiple security signals into actionable insights, enabling faster detection, accurate prioritization, and efficient incident response.
 
 ## 🛠️ Tech Stack
 
