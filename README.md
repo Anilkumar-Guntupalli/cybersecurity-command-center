@@ -74,62 +74,104 @@ Most security dashboards focus on displaying data.
 
 SYSTEM ARCHITECTURE
 
-The Cybersecurity Command Center is designed using a modular, real-world Security Operations Center (SOC) architecture. The system collects security events, enriches them with threat intelligence, evaluates contextual risk, and presents prioritized alerts to analysts for faster and more accurate decision-making.
+The Cybersecurity Command Center is built as a modular Security Operations platform designed to mirror real-world SOC environments. The architecture focuses on correlating security events, compressing threat intelligence, and delivering decision-ready alerts to analysts instead of raw data.
 
-ARCHITECTURE FLOW
+────────────────────────────
+ARCHITECTURE OVERVIEW
+────────────────────────────
+
+The system follows a layered pipeline architecture where each layer adds context, intelligence, and clarity to security events.
 
 Data Sources
-• Authentication logs
-• Network activity
-• Threat intelligence feeds
+Security data originates from multiple sources, including:
 
-↓
+Authentication and access logs
 
-Event Ingestion Layer
-• Collects logs and threat feeds
-• Normalizes event formats
-• Validates incoming data
+Network activity and traffic events
 
-↓
+External threat intelligence feeds
+
+These sources represent the typical inputs used by enterprise SOC teams.
+
+Ingestion Layer
+The ingestion layer is responsible for:
+
+Collecting logs and threat feeds
+
+Normalizing event formats
+
+Ensuring consistent and structured data
+
+This layer acts as the foundation for accurate analysis.
 
 Correlation Engine
-• Links related events
-• Identifies suspicious patterns
-• Enriches events with reputation data
+The correlation engine connects related events and intelligence by:
 
-↓
+Identifying repeated or abnormal behavior
+
+Linking events with known malicious indicators
+
+Enriching alerts with reputation and confidence data
+
+This step reduces isolated alerts and highlights meaningful attack patterns.
 
 Risk Analysis Layer
-• Calculates risk scores
-• Assigns severity levels
-• Weighs confidence and behavior indicators
+Each correlated alert is evaluated using:
 
-↓
+Behavioral frequency
+
+Threat reputation
+
+Confidence scores
+
+Contextual indicators
+
+The output of this layer is a calculated risk score and severity level that reflects real SOC prioritization logic.
 
 Decision Support Layer
-• Generates analyst-friendly explanations
-• Reduces alert noise
-• Suggests investigation or response actions
+Instead of showing raw alerts, the system:
 
-↓
+Generates analyst-friendly explanations
 
-SOC Dashboard
-• Displays prioritized alerts
-• Provides investigation context
-• Supports analyst workflows
+Highlights why an alert matters
 
-ARCHITECTURAL PRINCIPLES
+Suggests appropriate response actions
 
-• Modular and extensible design
-• Analyst-centric decision support
-• Signal-over-noise philosophy
-• Resilient operation without full AI dependency
-• Built to reflect real SOC workflows
+This significantly reduces alert fatigue and investigation time.
 
-WHY THIS ARCHITECTURE MATTERS
+Security Operations Dashboard
+The final layer presents information to analysts through:
 
-Modern security teams face alert overload, fragmented intelligence, and limited response time.
-This architecture compresses multiple security signals into actionable insights, enabling faster detection, accurate prioritization, and efficient incident response.
+Prioritized alerts
+
+Severity and risk visualization
+
+Investigation context in a single view
+
+The dashboard is designed to support fast, confident decision-making under pressure.
+
+────────────────────────────
+KEY ARCHITECTURAL PRINCIPLES
+────────────────────────────
+
+Analyst-centric design
+
+Signal over noise philosophy
+
+Risk-based prioritization
+
+Modular and extensible components
+
+Operates even with limited AI availability
+
+────────────────────────────
+ARCHITECTURE VALUE
+────────────────────────────
+
+Traditional security dashboards focus on displaying data.
+This architecture focuses on helping analysts decide.
+
+By compressing multiple security signals into actionable intelligence, the Cybersecurity Command Center enables faster detection, better prioritization, and more effective incident response.
 
 ## 🛠️ Tech Stack
 
