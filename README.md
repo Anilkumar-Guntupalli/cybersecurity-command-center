@@ -74,3 +74,69 @@ Most security dashboards focus on displaying data.
 
 ## 🧩 System Architecture
 
+Data Sources
+├── Authentication Logs
+├── Network Activity
+├── Threat Intelligence Feeds
+↓
+Correlation Engine
+↓
+Risk Scoring & Severity Classification
+↓
+Security Operations Dashboard
+
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React + Vite
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide Icons
+
+### Backend
+- FastAPI
+- Python
+- Modular agent-based architecture
+
+---
+
+## 🧪 Project Status
+
+- Frontend dashboard: ✅ Completed  
+- Backend SOC analysis pipeline: ✅ Implemented  
+- Intelligence enrichment: ✅ Simulated  
+- Production deployment: ⏳ Optional  
+
+---
+
+## 🔮 Future Enhancements
+
+- Automated response playbooks  
+- Predictive risk trending  
+- SIEM integrations  
+- Advanced anomaly detection  
+- Real-time data ingestion  
+
+---
+
+## 📄 Academic & Research Note
+
+This project is intended for:
+- Academic evaluation  
+- Internship selection  
+- Research demonstrations  
+- Portfolio showcase  
+
+It does **not** claim to replace enterprise SOC tools.
+
+---
+
+## 👤 Author
+
+**Anilkumar**  
+Cybersecurity & Security Analytics Enthusiast
+
